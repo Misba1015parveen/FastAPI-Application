@@ -1,6 +1,8 @@
 # Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 venv/
 
 # Environment
@@ -8,6 +10,15 @@ venv/
 
 # VS Code
 .vscode/
+
+# IDE
+.idea/
+
+# Docker
+postgres_data/
+
+# Logs
+*.log
 
 # OS
 .DS_Store

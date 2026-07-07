@@ -25,7 +25,7 @@ logger.info("FastAPI application started successfully.")
 @app.get("/")
 def home():
     logger.info("Home endpoint accessed.")
-    return {"message": "Welcome to the DevOps Assignment"}
+    return {"message": "Welcome to the DevOps Assignment misba"}
     
 
 @app.get("/health")

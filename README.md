@@ -231,3 +231,20 @@ docker compose up -d --build --remove-orphans
 ```
 
 This reduces application downtime during deployments and provides a smoother update process.
+
+
+## Monitoring
+
+Container monitoring is implemented using **cAdvisor**.
+
+Features:
+
+- CPU Usage
+- Memory Usage
+- Disk Usage
+- Network Statistics
+- Docker Container Metrics
+
+Dashboard:
+
+http://<EC2-Public-IP>:8081

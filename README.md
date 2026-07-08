@@ -165,7 +165,7 @@ sudo ufw allow OpenSSH
 sudo ufw allow 80
 sudo ufw enable
 sudo ufw status
-
+---
 ## Fail2Ban
 
 Fail2Ban was installed on the EC2 server to provide basic protection against SSH brute-force attacks by blocking IP addresses after repeated failed SSH login attempts.

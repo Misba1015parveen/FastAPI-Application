@@ -190,29 +190,3 @@ sudo systemctl status fail2ban
 ```
 
 Fail2Ban runs as a background service and helps secure the EC2 server from brute-force SSH attacks.
-
-## Automated Backups
-
-The PostgreSQL database is backed up automatically using a shell script and Cron.
-
-### Backup Script
-
-The `backup.sh` script creates a PostgreSQL backup using `pg_dump`.
-
-```bash
-docker exec postgres_db pg_dump -U postgres devops_db > /home/ubuntu/backup-<date>.sql
-```
-
-### Scheduled Backup
-
-Cron is configured to run the backup every day at 2:00 AM.
-
-```cron
-0 2 * * * /home/ubuntu/backup.sh
-```
-
-Backups are stored in:
-
-```
-/home/ubuntu/
-```

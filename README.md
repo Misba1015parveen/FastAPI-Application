@@ -217,3 +217,17 @@ Backups are stored in:
 /home/ubuntu/
 ```
 
+## Zero-Downtime Deployment
+
+The application uses an improved deployment strategy through GitHub Actions.
+
+Instead of stopping all containers before deployment, Docker Compose rebuilds and updates only the services that have changed.
+
+Deployment commands:
+
+```bash
+docker compose pull
+docker compose up -d --build --remove-orphans
+```
+
+This reduces application downtime during deployments and provides a smoother update process.
